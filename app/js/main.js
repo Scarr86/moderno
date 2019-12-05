@@ -1,13 +1,13 @@
 $(function () {
 
-
+   // star rating card
    $(".rate-star").rateYo({
       rating: 3.6,
       starWidth: "12px",
       readOnly: true,
    });
-
-
+   //===========
+   // slider
    $('.product-slider__inner').slick({
       // infinite: true,
       slidesToShow: 4,
@@ -25,23 +25,56 @@ $(function () {
       prefix: "$",
       skin: "round",
    });
-
-   $('.icon-th-list').on('click',function () {
+   //===============
+   // toggle block | list card from new-items.html
+   $('.icon-th-list').on('click', function () {
       $('.product-page__items .products__item').addClass('list');
       $(this).addClass('active');
       $('.icon-th-large').removeClass('active');
 
    });
-   $('.icon-th-large').on('click',function(){
+   $('.icon-th-large').on('click', function () {
       $('.product-page__items .products__item').removeClass('list');
       $(this).addClass('active');
       $('.icon-th-list').removeClass('active');
+   });
+   //=========
+
+   // login
+   // $('.header__btn-logout').removeClass('header__btn-login--on');
+   // $('.header__btn-login').removeClass('header__btn-login--off');
+   // $('.header__btn-register').removeClass('header__btn-login--off');
+
+   $('.header__btn-login').on('click', function () {
+      $(this).addClass('header__btn-login--off');
+      $('.header__btn-logout').addClass('header__btn-login--on');
+      $('.header__btn-register').addClass('header__btn-login--off');
    })
-   
+   $('.header__btn-logout').on('click', function () {
+      $(this).removeClass('header__btn-login--on');
+      $('.header__btn-login').removeClass('header__btn-login--off');
+      $('.header__btn-register').removeClass('header__btn-login--off');
+   })
+   //=============
+
+
+   // menu burger
+   $('.menu__btn').on('click', function(){
+      $('.menu__list').slideToggle();
+   });
+
+
+   $('.header__btn-menu ').on('click', function(){
+      $('.header__box').toggleClass('active');
+   });
+
+   //============
+
+
    try {
       var mixer = mixitup('.products__inner-box');
    } catch (error) {
       console.log(error);
    }
 
-})
+});

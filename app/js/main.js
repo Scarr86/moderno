@@ -85,6 +85,10 @@ $(function () {
       });
    //=============
 
+   // formstyler
+   $('input[type="file"], select').styler();
+   //===============
+
 
    try {
       var mixer = mixitup('.products__inner-box');

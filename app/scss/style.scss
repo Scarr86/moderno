@@ -491,7 +491,6 @@
     position: relative;
     box-shadow: 0px 1px 10px 0px rgba(100, 100, 100, 0.75);
 
-
     input {
       display: block;
       width: 100%;
@@ -517,7 +516,7 @@
     }
   }
 }
- 
+
 //=========products=============
 
 .products {
@@ -1413,7 +1412,7 @@
       font-size: 16px;
       padding: 20px 0;
       cursor: pointer;
-      & + & {
+      & + .tab {
         border-left: 1px solid #d7d7d7;
       }
 
@@ -1650,7 +1649,8 @@
 
 // start page 404
 .page-404,
-.about {
+.about,
+.contact {
   &__wrapper {
     border: 1px solid #dcdcdc;
     background-color: #fff;
@@ -1665,6 +1665,7 @@
     border-bottom: 1px solid #dcdcdc;
   }
 }
+
 .page-404 {
   &__inner {
     text-align: center;
@@ -1733,5 +1734,218 @@
   }
 }
 //end about
+
+//start contacts
+
+.contact {
+  &__wrapper {
+  }
+
+  &__head {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__inner {
+    padding: 35px 40px 15px;
+  }
+
+  &__map {
+    margin-bottom: 50px;
+    iframe {
+      width: 100%;
+      height: 415px;
+    }
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__info {
+    margin-right: 30px;
+    max-width: 330px;
+    width: 100%;
+  }
+
+  &__info-item {
+    margin-bottom: 30px;
+  }
+
+  &__info-title {
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    @include f500;
+    color: $bg;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      left: 40px;
+      bottom: 0;
+      width: 44px;
+      height: 4px;
+      background-color: $green;
+      position: absolute;
+    }
+    &::before {
+      color: $green;
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__info-content {
+    padding-left: 40px;
+    color: #707070;
+    max-width: 275px;
+  }
+
+  &__form {
+    width: 100%;
+    input {
+      border: none;
+      height: 43px;
+      padding-left: 17px;
+      padding-right: 17px;
+      background-color: #f1f4f5;
+      width: 350px;
+      margin-bottom: 30px;
+      &::placeholder {
+        font-size: 15px;
+        color: #7a7a7a;
+      }
+    }
+    textarea {
+      border: none;
+      padding: 13px 17px;
+      height: 190px;
+      background-color: #f1f4f5;
+      width: 100%;
+      resize: none;
+      margin-bottom: 23px;
+      &::placeholder {
+        font-size: 15px;
+        color: #7a7a7a;
+      }
+    }
+    button {
+      border: none;
+      text-transform: uppercase;
+      background-color: $green;
+      font-size: 16px;
+      text-align: center;
+      @include f700;
+      color: #fff;
+      padding: 20px 5px;
+      width: 190px;
+    }
+  }
+
+  &__form-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    @include f500;
+  }
+
+  &__form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+// end contacts
+
+// start Settings
+.setting {
+  margin-bottom: 100px;
+}
+.product-one__tabs.settings__tabs {
+  display: flex;
+
+  .tabs {
+    max-width: 270px;
+    margin-right: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    span {
+      font-size: 14px;
+      color: #707070;
+      @include f500;
+      padding: 17px 17px 17px 50px;
+      & + span {
+        border-top: 1px solid #dedede;
+        border-left: none;
+      }
+      &::before {
+        left: 24px;
+        color: #444;
+      }
+      &.active {
+        color: #37474f;
+        &::before {
+          color: $green;
+        }
+      }
+    }
+  }
+  .tab_content {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+.page-box {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  height: 100%;
+
+  &__title {
+    border-bottom: 1px solid #dedede;
+    padding: 18px 34px;
+    color: $bg;
+    font-size: 24px;
+    @include f500;
+  }
+
+  &__content {
+    display: block;
+    padding: 35px 35px 80px;
+  }
+}
+.settings__line {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  label {
+    width: 260px;
+    color: #444;
+  }
+  input {
+    max-width: 540px;
+    width: 100%;
+    height: 40px;
+    color: #000;
+    background-color: #f9f9f9;
+    border: 1px solid #dedede;
+    padding: 0 10px;
+  }
+  select {
+    max-width: 540px;
+    width: 100%;
+    height: 40px;
+    color: #707070;
+    background-color: #f9f9f9;
+    border: 1px solid #dedede;
+    padding: 0 10px;
+  }
+}
+
+// eng Settings
 
 @import "media";

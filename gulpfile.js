@@ -17,7 +17,6 @@ gulp.task('style', function () {
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
       'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
       'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
-
    ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())

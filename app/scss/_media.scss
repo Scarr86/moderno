@@ -1,4 +1,38 @@
+@media (max-width: 1900px) {
+  .product-slider__inner {
+    text-align: center;
+    .products__item-name {
+      text-align: left;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .product-slider__inner .products__item {
+    max-width: 560px;
+  }
+}
+// .product-slider .products__item
+@media (max-width: 1400px) {
+  .product-slider__inner {
+    text-align: center;
+    .products__item {
+      max-width: 560px;
+    }
+  }
+  .products .products__item {
+    flex-basis: calc(33.3333% - 30px);
+  }
+}
+
+@media (max-width: 1225px) {
+  .product-slider__inner .products__item {
+    max-width: 360px;
+  }
+}
 @media (max-width: 1200px) {
+  .tutorial__item {
+    padding: 0 5px;
+  }
   .withdrawals__inner {
     display: block;
   }
@@ -40,8 +74,27 @@
       margin-right: 30px;
     }
   }
+  .product-page__inner {
+    display: block;
+    .aside__item {
+      width: 100%;
+    }
+    .product-page__aside {
+      margin: 0;
+    }
+  }
+  .top-sellers {
+    display: none;
+  }
 }
 @media (max-width: 1150px) {
+  .products .products__item {
+    flex-basis: calc(50% - 30px);
+    max-width: 100%;
+  }
+  .products__item-img {
+    min-height: 225px;
+  }
   .footer__inner {
     flex-wrap: wrap;
   }
@@ -54,6 +107,17 @@
   }
 }
 @media (max-width: 1020px) {
+  .tutorial__inner {
+    flex-wrap: wrap;
+    margin-left: -20px;
+  }
+  .tutorial__item {
+    flex-basis: calc(50% - 20px);
+    margin-left: 20px;
+    padding: 0;
+    max-width: 100%;
+  }
+
   .product-one__tabs.settings__tabs {
     display: block;
   }
@@ -72,6 +136,18 @@
   }
 }
 @media (max-width: 900px) {
+  .advantages__inner {
+    flex-direction: column;
+    align-items: center;
+    & > * {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+  }
+  .search__inner-title {
+    font-size: 35px;
+    line-height: 40px;
+  }
   .footer__col-social {
     min-width: 100%;
     margin-top: 30px;
@@ -104,9 +180,23 @@
   .profile__aside-btn {
     width: 300px;
   }
+  .product-page__content .products__item {
+    flex-basis: calc(50% - 30px);
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .product-page__items {
+    margin-left: -20px;
+  }
+  .products__item.list {
+    flex-basis: 100%;
+  }
 }
 
 @media (max-width: 840px) {
+  .author {
+    min-height: 450px;
+  }
   .menu__list {
     display: none;
     background-color: $bg;
@@ -162,7 +252,18 @@
   .product-one__link {
     margin-bottom: 20px;
   }
+
+  .icon-th-list {
+    display: none;
+  }
 }
+
+@media (max-width: 800px) {
+  .product-slider__inner .products__item {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 740px) {
   .page-404__404 {
     font-size: 200px;
@@ -182,8 +283,31 @@
     margin-bottom: 50px;
   }
 }
+@media (max-width: 700px) {
+  .products .products__item {
+    flex-basis: 100%;
+  }
+
+  .author__box {
+    display: block;
+    padding: 50px 15px;
+    text-align: center;
+  }
+  .author__title {
+    margin: 0 auto 20px;
+  }
+}
 
 @media (max-width: 640px) {
+  .tutorial__item {
+    flex-basis: 100%;
+  }
+  .products__inner-btn button {
+    width: 100%;
+    & + button {
+      margin-left: 0;
+    }
+  }
   .footer__col {
     min-width: 100%;
   }
@@ -218,6 +342,10 @@
   }
   .productmini {
     max-width: 100%;
+  }
+
+  .product-page__content .products__item {
+    flex-basis: 100%;
   }
 }
 @media (max-width: 600px) {
@@ -303,11 +431,29 @@
     }
   }
   .product-one__img {
-     min-height: 300px;
+    min-height: 300px;
   }
 }
 
 @media (max-width: 520px) {
+   .login__wrapper .creat-acc {
+      width: 100%;
+   }
+   .login__wrapper form button{
+      margin-right: 0;
+      width: 100%;
+
+   }
+
+
+  .product-slider .slick-dots li button {
+    width: 13px;
+    height: 13px;
+  }
+  .product-slider .slick-dots li {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
   .menu__list {
     top: 69px;
   }
@@ -341,8 +487,7 @@
     left: 100%;
     right: -100%;
     &.active {
-      left: 70px;
-      // right: 70px;
+      left: 50px;
       right: 0;
     }
   }
@@ -394,6 +539,9 @@
 }
 
 @media (max-width: 390px) {
+   .fancybox-content{
+      padding: 44px 10px;
+   }
   .header__box {
     &.active {
       left: 47px;

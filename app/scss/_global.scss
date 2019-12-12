@@ -11,6 +11,8 @@ html {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -85,6 +87,8 @@ body {
 .breadcrumbs {
   &__inner {
     padding: 45px 0 40px;
+    overflow: hidden;
+    width: 1200px;
   }
   &__list {
     li {

@@ -287,7 +287,6 @@
     background-color: $red;
   }
 }
-
 .notification__menu,
 .message__menu {
   .circle {
@@ -355,6 +354,7 @@
 
 // start modal
 #modal {
+  display: none;
   background-color: $green;
   max-width: 730px;
   width: 100%;
@@ -523,6 +523,11 @@
   padding: 100px 0 110px;
   background-color: $grey;
 }
+.products__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 
 .products__inner-btn {
   text-align: center;
@@ -546,10 +551,15 @@
 
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 
+.products .products__item {
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
+}
 .products__item {
   max-width: 442px;
   width: 100%;
@@ -960,7 +970,7 @@
   }
 }
 
-// ====== start product-page ========
+// ====== start  NEW-PRODUCT page ========
 
 .product-page__inner {
   display: flex;
@@ -1024,16 +1034,18 @@
     @include f500;
     width: 100%;
     cursor: pointer;
-    position: relative;
+    //  position: relative;
     display: block;
     &::before {
       content: "\f002";
       color: #fff;
       font-size: 15px;
       font-family: "icomoon";
-      position: absolute;
-      left: 58px;
-      top: 15px;
+      // position: absolute;
+      display: inline-block;
+      margin-right: 5px;
+      // left: 58px;
+      // top: 15px;
     }
   }
 }
@@ -1169,12 +1181,10 @@
   color: #707070;
   vertical-align: middle;
 }
+
 .product-page__content {
   width: 100%;
-}
-.product-page__content {
   .products__item {
-    //max-width: 270px;
     transition: all 0.3s;
     flex-basis: calc(33.3333% - 30px);
     margin-left: 30px;
@@ -1268,7 +1278,8 @@
 }
 .products__item {
   &.list {
-    max-width: 100%;
+    //  width: 100%;
+    flex-basis: 100%;
     .products__item-img {
       width: 240px;
       float: left;
@@ -1307,9 +1318,9 @@
     }
   }
 }
-// ====== end product-page ==========
+// ====== end NEW-PRODUCT page ==========
 
-// start product one
+// start  PRODUCT-ONE page
 
 .product-one {
   padding-bottom: 100px;
@@ -1644,7 +1655,7 @@
     @include f500;
   }
 }
-// end product one
+// end PRODUCT-ONE page
 
 // start page 404
 .page-404,
@@ -2507,57 +2518,55 @@
 }
 // end withdrawals
 
-.select{
-   
-   &.jq-selectbox {
-      width: 100%;
+.select {
+  &.jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    background-color: #f9f9f9;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger {
+    border: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
     }
-    .jq-selectbox__select {
-      height: 40px;
+  }
+  .jq-selectbox__dropdown {
+    margin: 0 0 0;
+    padding: 0;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto-Regular", sans-serif;
+    li {
       padding: 0 18px;
-      border: 1px solid #d7d7d7;
-      background-color: #f9f9f9;
-      border-bottom-color: #d7d7d7;
-      border-radius: 0px;
-      background: #f9f9f9;
-      box-shadow: none;
-      font-family: "Roboto-Regular", sans-serif;
+      vertical-align: bottom;
+      height: 40px;
       line-height: 40px;
-      color: #707070;
-      text-shadow: none;
-    }
-    .jq-selectbox__trigger {
-      border: none;
-    }
-    .jq-selectbox__trigger-arrow {
-      border: none;
-      top: 0;
-      right: 20px;
-      line-height: 40px;
-      font-size: 15px;
-      &::before {
-        content: "\f0d7";
-        font-family: "icomoon";
+      &:hover {
+        background-color: $green;
       }
     }
-    .jq-selectbox__dropdown {
-      margin: 0 0 0;
-      padding: 0;
-      border-radius: 0px;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      font-family: "Roboto-Regular", sans-serif;
-      li {
-        padding: 0 18px;
-        vertical-align: bottom;
-        height: 40px;
-        line-height: 40px;
-        &:hover {
-          background-color: $green;
-        }
-      }
-    }
-
+  }
 }
 
 @import "media";

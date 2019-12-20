@@ -1,4 +1,15 @@
+
+"use strict";
 $(function () {
+
+   new WOW({
+      offset: 100,
+   }).init();
+
+   $('.products__item ').map((i, item) => {
+      $(item).css("animation-delay", `${i * 0.3}s`);
+   });
+
 
    // star rating card
    $(".rate-star").rateYo({
@@ -38,7 +49,9 @@ $(function () {
          },
       ]
    });
+   //======
 
+   // Ragne slider
    $(".js-range-slider").ionRangeSlider({
       type: "double",
       min: 0,

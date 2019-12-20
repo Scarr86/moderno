@@ -5,6 +5,11 @@
 .header {
   background-color: #fff;
 }
+.header__top {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
 .header__top-inner {
   height: 90px;
   display: flex;
@@ -473,17 +478,25 @@
   padding: 155px 0 100px;
   color: #fff;
   text-align: center;
+  &:hover {
+    .search__inner-title{
+      animation-duration: 2s;
+      animation-name: fadeInDown;
+    }
+  }
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
     @include f700;
     line-height: 72px;
   }
+
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
     line-height: 30px;
     @include f500;
+    animation-name: fadeInUp;
   }
   &-form {
     max-width: 670px;
@@ -566,6 +579,23 @@
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   background-color: #fff;
   margin-bottom: 30px;
+  animation-duration: 1.3s;
+  // &:nth-child(1),
+  // &:nth-child(5) {
+  //   animation-delay: 0.3s;
+  // }
+  // &:nth-child(2),
+  // &:nth-child(6) {
+  //   animation-delay: 0.6s;
+  // }
+  // &:nth-child(3),
+  // &:nth-child(7) {
+  //   animation-delay: 0.9s;
+  // }
+  // &:nth-child(4),
+  // &:nth-child(8) {
+  //   animation-delay: 1.2s;
+  // }
 
   &-img {
     min-height: 250px;
@@ -680,6 +710,9 @@
         outline: none;
       }
     }
+  }
+  .products__item {
+    animation-name: fadeInDown;
   }
 }
 
@@ -1950,7 +1983,7 @@
     height: 40px;
     color: #707070;
     background-color: #f9f9f9;
-   //  border: 1px solid #dedede;
+    //  border: 1px solid #dedede;
     padding: 0 10px;
   }
 

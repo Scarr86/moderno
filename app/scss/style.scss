@@ -496,7 +496,7 @@
     font-size: 20px;
     line-height: 30px;
     @include f500;
-    animation-name: fadeInUp;
+    // animation-name: fadeInUp;
   }
   &-form {
     max-width: 670px;
@@ -1313,6 +1313,7 @@
   &.list {
     //  width: 100%;
     flex-basis: 100%;
+    max-width: 100%;
     .products__item-img {
       width: 240px;
       float: left;

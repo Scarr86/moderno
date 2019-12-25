@@ -124,7 +124,14 @@ $(function () {
    // formstyler
    $('input[type="file"], select').styler();
    //===============
+   $('.products__inner-btn').on('click', function () {
+      console.log("clikc");
+      
 
+      // $('.products__item').removeClass("wow");
+      $('.products__item').css({"animationName":"none"});
+
+   })
 
    try {
       var mixer = mixitup('.products__inner-box');
